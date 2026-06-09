@@ -1,0 +1,922 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+        <meta
+            name="description"
+            content="Imersão Cansaço - Uma jornada em 8 encontros para compreender as raízes do desgaste físico, mental, emocional e espiritual, encontrando em Cristo caminhos concretos de renovação, equilíbrio e paz."
+        />
+        <meta
+            name="keywords"
+            content="Imersão, Cansaço, Descanso, Espiritualidade, Burnout, Saúde Mental, Renovação, Evento Católico, Evento Cristão, Mateus 11:28"
+        />
+        <meta name="author" content="Eucaristos" />
+        <meta
+            property="og:title"
+            content="Imersão Cansaço - Vinde a mim vós que estais cansados"
+        />
+        <meta
+            property="og:description"
+            content="Você está realmente descansando ou apenas sobrevivendo ao cansaço? Participe da nossa Imersão em 8 encontros."
+        />
+        <meta property="og:type" content="website" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Special+Elite&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            async
+            src="https://eventos.eucaristos.com.br/widget.js"
+        ></script>
+        <script
+            defer
+            src="https://analytics.eucaristos.com.br/script.js"
+            data-website-id="f821178a-9140-4468-ad7e-95eb5cc1478c"
+        ></script>
+        <script
+            defer
+            src="https://analytics.eucaristos.com.br/recorder.js"
+            data-website-id="f821178a-9140-4468-ad7e-95eb5cc1478c"
+            data-sample-rate="0.15"
+            data-mask-level="moderate"
+            data-max-duration="300000"
+        ></script>
+        <title>Imersão Cansaço - Vinde a mim</title>
+        <style>
+            /* ================= CSS VARIABLES & RESET ================= */
+            :root {
+                --primary: #1e293b;
+                --secondary: #64748b;
+                --accent: #d97706;
+                --bg: #f8fafc;
+                --surface: #ffffff;
+                --text: #334155;
+                --text-light: #f8fafc;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Elms Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: 400;
+                font-style: normal;
+            }
+            body {
+                background: var(--bg);
+                color: var(--text);
+                line-height: 1.6;
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+            }
+            section {
+                padding: 5rem 2rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+            h1,
+            h2,
+            h3,
+            h4 {
+                color: var(--primary);
+                margin-bottom: 1rem;
+                line-height: 1.2;
+            }
+            h2 {
+                color: var(--accent);
+            }
+            p {
+                margin-bottom: 1rem;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+            .secondary {
+                color: var(--accent);
+            }
+
+            .btn {
+                display: inline-block;
+                background: var(--accent);
+                color: var(--text-light);
+                padding: 1rem 2.5rem;
+                border-radius: 30px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                margin-top: 1.5rem;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+            .btn:hover {
+                background: #b45309;
+                transform: translateY(-3px);
+                box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+            }
+            .text-center {
+                text-align: center;
+            }
+
+            /* ================= ANIMATIONS ================= */
+            .animate {
+                opacity: 0;
+                transform: translateY(40px);
+                transition:
+                    opacity 0.8s ease-out,
+                    transform 0.8s ease-out;
+            }
+            .animate.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            /* ================= SECTIONS ================= */
+            /* Page 1: Hero */
+            /* ================= HERO COM BACKGROUND BLUR ================= */
+            .hero {
+                position: relative; /* Necessário para posicionar o background corretamente */
+                overflow: hidden; /* Esconde as bordas borradas que ultrapassam o container */
+                padding: 6rem 2rem 4rem;
+                text-align: center;
+                background: url("assets/capa.png"); /* COLOQUE AQUI O CAMINHO DA SUA IMAGEM */
+                background-size: cover;
+                background-position: center;
+            }
+            .hero p.subtitle {
+                font-family: "Special Elite", system-ui;
+                font-weight: 400;
+                font-style: normal;
+                color: var(--accent);
+                font-size: 3rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
+            }
+            .hero h1 {
+                color: var(--text-light);
+                font-size: 2.5rem;
+                max-width: 800px;
+                margin: 0 auto 2rem;
+            }
+
+            .video-wrapper {
+                width: 100%;
+                max-width: 800px;
+                margin: 2rem auto;
+                aspect-ratio: 16/9;
+            }
+            .video-wrapper iframe {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+            }
+            .video-placeholder {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background: #334155;
+                color: #fff;
+                cursor: pointer;
+                transition: background 0.3s;
+            }
+            .video-placeholder:hover {
+                background: #475569;
+            }
+            .play-button {
+                width: 70px;
+                height: 70px;
+                background: rgba(255, 255, 255, 0.2);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                backdrop-filter: blur(5px);
+            }
+
+            /* Page 2: Cansaço */
+            .cansaco-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 4rem;
+                align-items: center;
+            }
+            .cansaco-grid .image-box {
+                background: #e2e8f0;
+                width: 100%;
+                aspect-ratio: 4/3;
+                border-radius: 12px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: var(--secondary);
+                font-weight: bold;
+                font-size: 1.5rem;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            }
+            .quote {
+                font-size: 1.3rem;
+                font-style: italic;
+                color: var(--accent);
+                border-left: 4px solid var(--accent);
+                padding: 1rem 0 1rem 1.5rem;
+                margin: 2rem 0;
+                background: rgba(217, 119, 6, 0.05);
+                border-radius: 0 8px 8px 0;
+            }
+
+            /* Page 3: Abordagem Formativa */
+            .abordagem-bg {
+                background: var(--surface);
+            }
+            .abordagem-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 1.5rem;
+                margin: 3rem 0;
+                text-align: center;
+            }
+            .abordagem-card {
+                padding: 2rem;
+                background: var(--bg);
+                border-radius: 12px;
+                border-bottom: 4px solid var(--accent);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+                transition: transform 0.3s;
+            }
+            .abordagem-card:hover {
+                transform: translateY(-5px);
+            }
+
+            /* Page 4: Estrutura da Imersão */
+            .modulos-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 1.5rem;
+                margin-top: 3rem;
+            }
+            .modulo-card {
+                background: var(--surface);
+                padding: 1.5rem;
+                border-left: 4px solid var(--primary);
+                border-radius: 0 8px 8px 0;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            }
+            .modulo-card span {
+                color: var(--accent);
+                font-weight: bold;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                display: block;
+                margin-bottom: 0.2rem;
+            }
+            .modulo-card h3 {
+                font-size: 1.1rem;
+                margin-bottom: 0;
+                color: var(--primary);
+            }
+
+            /* Page 5: Convidados */
+            .convidados-bg {
+                background: var(--primary);
+                color: var(--text-light);
+            }
+            .convidados-bg h2 {
+                color: var(--text-light);
+            }
+            .convidados-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+                gap: 2.5rem;
+                text-align: center;
+                margin-top: 3rem;
+            }
+            .convidado-card img {
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-bottom: 1rem;
+                border: 3px solid var(--accent);
+            }
+            .convidado-card h3 {
+                color: var(--text-light);
+                font-size: 1.1rem;
+                margin-bottom: 0.2rem;
+            }
+            .convidado-card p {
+                color: var(--secondary);
+                font-size: 0.9rem;
+            }
+
+            /* Page 6: Modalidades de Participação */
+            .modalidades-header {
+                text-align: center;
+                margin-bottom: 3rem;
+                max-width: 600px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .modalidades-header .info-box {
+                background: var(--surface);
+                padding: 1.5rem;
+                border-radius: 8px;
+                margin-top: 1.5rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            }
+            .modalidades-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 2rem;
+                align-items: stretch;
+            }
+            .modalidade-card {
+                background: var(--surface);
+                padding: 2.5rem;
+                border-radius: 12px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden;
+            }
+            .modalidade-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 6px;
+                background: var(--accent);
+            }
+            .modalidade-card .mt-auto {
+                margin-top: auto;
+                padding-top: 1.5rem;
+                border-top: 1px solid #e2e8f0;
+            }
+
+            /* Page 7: Depoimentos */
+            .depoimentos-bg {
+                background: var(--surface);
+            }
+            .depoimentos-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+            .depoimento-card {
+                background: var(--bg);
+                padding: 2rem;
+                border-radius: 12px;
+                position: relative;
+                border-left: 4px solid var(--secondary);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .depoimento-card p {
+                font-style: italic;
+                color: var(--text);
+            }
+            .depoimento-card h4 {
+                margin-top: 1rem;
+                margin-bottom: 0;
+                color: var(--primary);
+                font-size: 1rem;
+            }
+
+            /* Page 8: Investimento */
+            .investimento-bg {
+                text-align: center;
+                padding-bottom: 2rem;
+            }
+            .price-box {
+                background: var(--surface);
+                max-width: 500px;
+                margin: 2rem auto;
+                padding: 3rem 2rem;
+                border-radius: 16px;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            }
+            .price {
+                font-size: 4rem;
+                font-weight: bold;
+                color: var(--primary);
+                line-height: 1;
+                margin: 1rem 0;
+            }
+            .contact-info {
+                margin-top: 3rem;
+                padding-top: 2rem;
+                border-top: 1px solid #e2e8f0;
+                font-size: 0.95rem;
+            }
+
+            /* Page 9: Footer / Parabéns */
+            footer {
+                background: var(--primary);
+                color: var(--text-light);
+                text-align: center;
+                padding: 5rem 2rem;
+            }
+            footer h3 {
+                color: var(--accent);
+                font-size: 2.2rem;
+            }
+            footer .footer-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .cansaco-grid,
+                .modalidades-grid {
+                    grid-template-columns: 1fr;
+                    gap: 2.5rem;
+                }
+                .hero {
+                    padding: 4rem 1rem;
+                }
+                .hero h1 {
+                    font-size: 1.3rem;
+                }
+                .hero p.subtitle {
+                    font-size: 2rem;
+                }
+                section {
+                    padding: 4rem 1.5rem;
+                }
+                .price {
+                    font-size: 3rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header class="hero">
+            <div class="animate">
+                <p class="subtitle">
+                    Imersão Cansaço - Vinde a mim vós que estais cansados (Mt
+                    11, 28)
+                </p>
+                <h1>
+                    Você está realmente descansando ou apenas sobrevivendo ao
+                    cansaço?
+                </h1>
+
+                <div class="video-wrapper">
+                    <iframe
+                        src="https://www.youtube.com/embed/BJWAvw0VWTc"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="
+                            accelerometer;
+                            autoplay;
+                            clipboard-write;
+                            encrypted-media;
+                            gyroscope;
+                            picture-in-picture;
+                            web-share;
+                        "
+                        allowfullscreen
+                    >
+                    </iframe>
+                </div>
+
+                <p
+                    style="
+                        max-width: 800px;
+                        margin: 0 auto;
+                        font-size: 1.1rem;
+                        color: #cbd5e1;
+                    "
+                >
+                    A Imersão é uma jornada em 8 encontros para compreender as
+                    raízes do desgaste físico, mental, emocional e espiritual,
+                    encontrando em Cristo caminhos concretos de renovação,
+                    equilíbrio e paz.
+                </p>
+                <a href="#investimento" class="btn">Participe conosco!</a>
+            </div>
+        </header>
+
+        <section id="cansaco" class="cansaco-grid">
+            <div class="image-box animate">
+                <img src="assets/photo1.jpg" alt="Imagem de Cansaço" />
+            </div>
+            <div class="animate">
+                <h2>CANSAÇO</h2>
+                <p>
+                    A imersão nasce da constatação de que o cansaço tornou-se
+                    uma experiência estrutural contemporânea.
+                </p>
+                <p>
+                    Não é apenas fadiga física, mas um fenômeno que atinge o ser
+                    humano em sua totalidade: corpo, mente, espírito e relações.
+                </p>
+
+                <div class="quote">
+                    “Vinde a mim vós todos que estais cansados e
+                    sobrecarregados, e eu vos darei descanso"<br />
+                    <strong
+                        style="
+                            color: var(--primary);
+                            display: block;
+                            margin-top: 0.5rem;
+                            font-size: 1.1rem;
+                            font-style: normal;
+                        "
+                        >Mateus 11,28</strong
+                    >
+                </div>
+
+                <p><strong>Uma resposta integral à condição humana.</strong></p>
+            </div>
+        </section>
+
+        <div class="abordagem-bg">
+            <section class="animate">
+                <h2 class="text-center">Uma abordagem formativa</h2>
+                <p class="text-center">
+                    A imersão propõe uma jornada que integra:
+                </p>
+
+                <div class="abordagem-grid">
+                    <div class="abordagem-card">
+                        <h3>Compreensão</h3>
+                        <p>dos tipos de cansaço</p>
+                    </div>
+                    <div class="abordagem-card">
+                        <h3>Discernimento</h3>
+                        <p>das causas profundas</p>
+                    </div>
+                    <div class="abordagem-card">
+                        <h3>Identificação</h3>
+                        <p>de padrões disfuncionais</p>
+                    </div>
+                    <div class="abordagem-card">
+                        <h3>Caminhos</h3>
+                        <p>concretos de descanso</p>
+                    </div>
+                </div>
+
+                <div
+                    class="text-center"
+                    style="max-width: 800px; margin: 0 auto"
+                >
+                    <p>
+                        A imersão responde a uma necessidade pastoral urgente: o
+                        cuidado com aqueles que servem, prevenindo o esgotamento
+                        e promovendo uma vida equilibrada e fecunda.
+                    </p>
+                </div>
+            </section>
+        </div>
+
+        <section class="animate">
+            <h2 class="text-center">Estrutura da Imersão</h2>
+            <p class="text-center">
+                Uma jornada de 8 módulos para cura, reorganização e descanso em
+                Deus.
+            </p>
+
+            <div class="modulos-grid">
+                <div class="modulo-card">
+                    <span>Módulo 01</span>
+                    <h3>Cansaço humano: realidade universal</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 02</span>
+                    <h3>Tipos de cansaço e suas raízes físicas e mentais</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 03</span>
+                    <h3>O cansaço do líder: A travessia</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 04</span>
+                    <h3>Burnout e esgotamento no serviço</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 05</span>
+                    <h3>Descanso do corpo e da mente</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 06</span>
+                    <h3>Descanso emocional e social</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 07</span>
+                    <h3>Cansaço espiritual e acídia</h3>
+                </div>
+                <div class="modulo-card">
+                    <span>Módulo 08</span>
+                    <h3>"Vinde a mim" o descanso espiritual</h3>
+                </div>
+            </div>
+        </section>
+
+        <div class="convidados-bg">
+            <span>&NegativeThinSpace;</span>
+            <!--<section class="animate">
+                <h2 class="text-center">Nossos Convidados</h2>
+                <div class="convidados-grid">
+                    <div class="convidado-card">
+                        <img
+                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Euler"
+                            alt="EULER"
+                        />
+                        <h3>EULER</h3>
+                        <p>MINI BIO</p>
+                    </div>
+                    <div class="convidado-card">
+                        <img
+                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Dra.+Anna"
+                            alt="DRA. ANNA"
+                        />
+                        <h3>DRA. ANNA</h3>
+                        <p>MINI BIO</p>
+                    </div>
+                    <div class="convidado-card">
+                        <img
+                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Almir"
+                            alt="ALMIR J. SANTOS"
+                        />
+                        <h3>ALMIR J. SANTOS</h3>
+                        <p>MINI BIO</p>
+                    </div>
+                    <div class="convidado-card">
+                        <img
+                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Dra.+Tatiana"
+                            alt="DRA. TATIANA LEGAL"
+                        />
+                        <h3>DRA. TATIANA LEGAL</h3>
+                        <p>MINI BIO</p>
+                    </div>
+                    <div class="convidado-card">
+                        <img
+                            src="https://via.placeholder.com/150/e2e8f0/334155?text=A+Confirmar"
+                            alt="A CONFIRMAR"
+                        />
+                        <h3>A CONFIRMAR</h3>
+                        <p>MINI BIO</p>
+                    </div>
+                </div>
+                </section>-->
+        </div>
+
+        <section class="animate" style="background: #f1f5f9; max-width: 100%">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem">
+                <div class="modalidades-header">
+                    <h2>Modalidades de Participação</h2>
+                    <div class="info-box">
+                        <p>
+                            <strong>DIAS E HORÁRIO</strong><br />Todas as TERÇAS
+                            E QUINTAS de Julho
+                        </p>
+                        <hr
+                            style="
+                                border: 0;
+                                height: 1px;
+                                background: #e2e8f0;
+                                margin: 1rem 0;
+                            "
+                        />
+                        <p>
+                            <strong>LOCALIZAÇÃO</strong><br />Trav. Nossa
+                            Senhora da Penha, nº 26 - São Paulo/SP
+                        </p>
+                    </div>
+                </div>
+
+                <div class="modalidades-grid">
+                    <div class="modalidade-card">
+                        <h3
+                            style="
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 8px;
+                            "
+                        >
+                            <span class="material-symbols-outlined">
+                                person_celebrate
+                            </span>
+                            Presencial
+                        </h3>
+                        <p>
+                            Opte preferencialmente pela opção de participação
+                            presencial. Assim você dará mais qualidade ao
+                            momentos de espiritualidade e de interação com
+                            nossos convidados.
+                        </p>
+                    </div>
+
+                    <div class="modalidade-card">
+                        <h3
+                            style="
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 8px;
+                            "
+                        >
+                            <span class="material-symbols-outlined"> tv </span
+                            >Online
+                        </h3>
+                        <p>
+                            A transmissão online será ao vivo via Youtube apenas
+                            para inscritos, e ficará disponível para assistir
+                            por 24 horas após o término de cada aula.
+                        </p>
+                        <p>
+                            Enquanto os alunos do presencial vivem a experiência
+                            física, os alunos do on-line receberão as
+                            transmissões com alta qualidade e suporte contínuo
+                            da nossa equipe.
+                        </p>
+
+                        <div class="mt-auto">
+                            <p style="margin-bottom: 0">
+                                <small
+                                    ><strong
+                                        >Por apenas R$10,00 adicionais, garanta
+                                        acesso às aulas por 1 ano na plataforma
+                                        Hotmart.</strong
+                                    ></small
+                                >
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="depoimentos-bg">
+            <section class="animate">
+                <h2 class="text-center">
+                    Ele não é a exceção. E você também não será.
+                </h2>
+                <div class="depoimentos-grid">
+                    <div class="depoimento-card">
+                        <p>
+                            "Participei de todas as Imersões desde o início, mas
+                            esta sobre a "Vontade" em 2025 marcou profundamente
+                            meu coração. Entendi que Deus respeita minha
+                            liberdade e me chama a responder ao Seu amor com
+                            confiança. Aprendi a discernir melhor o que vem de
+                            Deus e o que vem apenas de mim. Foi transformador.""
+                        </p>
+                        <h4>
+                            <span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><br />Francisca Neurimar Pinheiro
+                        </h4>
+                    </div>
+                    <div class="depoimento-card">
+                        <p>
+                            "Participar do imersão sobre a vontade me ajudou a
+                            olhar com muito mais caridade para mim mesmo. Minha
+                            vontade passa por muitas áreas dentro de mim e pode
+                            significar muitas coisas. Entender isso me ajudou a
+                            ter mais autoconsciência e pertença da minha própria
+                            vida. Fiquei muito surpreendido de como tratar de
+                            assuntos dessa forma pode mudar para melhor minha
+                            visão sobre as coisas. Faço questão de estar na
+                            próxima imersão!"
+                        </p>
+                        <h4>
+                            <span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><br />Daniel Costa
+                        </h4>
+                    </div>
+                    <div class="depoimento-card">
+                        <p>
+                            "Já participei de dez edições do Imersão e cada ano
+                            foi experiência diferente. A gente pensa que sabe de
+                            tudo, que não precisa de ajuda, mas conforme vai
+                            vivenciando e vivendo o imersão, vai percebendo que
+                            não se cuida direito, que não dá valor pro próprio
+                            tempo, pra própria vida, acabamos se perdendo de
+                            quem a gente é. Depois de todos esses ano pude
+                            entender os movimentos de Deus na minha vida e a
+                            importância de cuidar da minha saúde, do emocional.
+                            O imersão sempre é esperado com muita expectativa
+                            rsrs por que Deus sempre tem algo novo para nós…"
+                        </p>
+                        <h4>
+                            <span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><span class="material-symbols-outlined secondary">
+                                stars </span
+                            ><br />Leonardo Menezes
+                        </h4>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section id="investimento" class="investimento-bg animate">
+            <div class="price-box">
+                <h2>INVESTIMENTO</h2>
+                <div class="price">R$80,00</div>
+                <p>Pagamento no Pix ou Cartão</p>
+
+                <div
+                    data-hievents-id="5"
+                    data-hievents-primary-color="var(--primary)"
+                    data-hievents-primary-text-color="#000000"
+                    data-hievents-secondary-color="var(--accent)"
+                    data-hievents-secondary-text-color="#ffffff"
+                    data-hievents-background-color="#ffffff"
+                    data-hievents-widget-type="widget"
+                    data-hievents-widget-version="1.0"
+                    data-hievents-locale="pt-BR"
+                    data-hievents-padding="20px"
+                    data-hievents-autoresize="true"
+                    data-hievents-continue-button-text="Continuar"
+                    class="hievents-widget"
+                ></div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content animate">
+                <h5>Realização</h5>
+                <img
+                    src="assets/logo_completo.png"
+                    alt="Logo Completo"
+                    style="max-width: 200px"
+                />
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: "0px",
+                    threshold: 0.15,
+                };
+
+                const observer = new IntersectionObserver(
+                    (entries, observer) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("visible");
+                                observer.unobserve(entry.target); // Anima apenas 1 vez ao exibir
+                            }
+                        });
+                    },
+                    observerOptions,
+                );
+
+                document.querySelectorAll(".animate").forEach((el) => {
+                    observer.observe(el);
+                });
+            });
+        </script>
+    </body>
+</html>
