@@ -402,6 +402,13 @@
                 color: var(--primary);
                 font-size: 1rem;
             }
+            .foto-perfil {
+                width: 150px; /* Ajuste o tamanho conforme desejar */
+                height: 150px; /* Deve ser igual à largura */
+                border-radius: 50%; /* Faz o corte circular */
+                object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+                border: 3px solid #ccc; /* Opcional: adiciona uma borda ao redor */
+            }
 
             /* Page 8: Investimento */
             .investimento-bg {
@@ -772,7 +779,7 @@
         </section>
 
         <div class="depoimentos-bg">
-            <section class="animate">
+            <section class="animate" style="max-width: 2000px;">
                 <h2 class="text-center">
                     Ele não é a exceção. E você também não será.
                 </h2>
@@ -786,19 +793,43 @@
                             confiança. Aprendi a discernir melhor o que vem de
                             Deus e o que vem apenas de mim. Foi transformador.""
                         </p>
-                        <h4>
-                            <span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><br />Francisca Neurimar Pinheiro
-                        </h4>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 16px;
+                            "
+                        >
+                            <h4>
+                                <span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><br />Francisca Neurimar Pinheiro
+                            </h4>
+                            <img
+                                src="assets/chica.jpeg"
+                                alt="Foto de Perfil"
+                                class="foto-perfil"
+                            />
+                        </div>
                     </div>
                     <div class="depoimento-card">
                         <p>
@@ -813,18 +844,43 @@
                             próxima imersão!"
                         </p>
                         <h4>
-                            <span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><br />Daniel Costa
-                        </h4>
+                            <div
+                                style="
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    gap: 16px;
+                                "
+                            >
+                                <h4>
+                                    <span
+                                        class="material-symbols-outlined secondary"
+                                    >
+                                        stars </span
+                                    ><span
+                                        class="material-symbols-outlined secondary"
+                                    >
+                                        stars </span
+                                    ><span
+                                        class="material-symbols-outlined secondary"
+                                    >
+                                        stars </span
+                                    ><span
+                                        class="material-symbols-outlined secondary"
+                                    >
+                                        stars </span
+                                    ><span
+                                        class="material-symbols-outlined secondary"
+                                    >
+                                        stars </span
+                                    ><br />Daniel Costa
+                                </h4>
+                                <img
+                                    src="assets/daniel.jpeg"
+                                    alt="Foto de Perfil"
+                                    class="foto-perfil"
+                                />
+                            </div>
                     </div>
                     <div class="depoimento-card">
                         <p>
@@ -840,19 +896,86 @@
                             O imersão sempre é esperado com muita expectativa
                             rsrs por que Deus sempre tem algo novo para nós…"
                         </p>
-                        <h4>
-                            <span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><span class="material-symbols-outlined secondary">
-                                stars </span
-                            ><br />Leonardo Menezes
-                        </h4>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 16px;
+                            "
+                        >
+                            <h4>
+                                <span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><br />Leonardo Menezes
+                            </h4>
+                            <img
+                                src="assets/leo.jpeg"
+                                alt="Foto de Perfil"
+                                class="foto-perfil"
+                            />
+                        </div>
+                    </div>
+                    <div class="depoimento-card">
+                        <p>
+                            "Participar do imersão foi muito mais do que adquirir conhecimento sobre um tema; foi uma experiência transformadora que tocou profundamente minha vida e minha fé.
+                            Sou imensamente grata por todo o ensinamento passado,com profissionais maravilhosos que atuam na area, cada aprendizado foi uma oportunidade de crescer espiritualmente e compreender ainda mais o amor infinito de Deus por nós. Agradeço a comunidade Eucaristos por proporcionar essa riqueza de curso."
+                        </p>
+                        <div
+                            style="
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 16px;
+                            "
+                        >
+                            <h4>
+                                <span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><span
+                                    class="material-symbols-outlined secondary"
+                                >
+                                    stars </span
+                                ><br />Janaína Landim
+                            </h4>
+                            <img
+                                src="assets/jana.jpeg"
+                                alt="Foto de Perfil"
+                                class="foto-perfil"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
