@@ -41,14 +41,7 @@
             src="https://analytics.eucaristos.com.br/script.js"
             data-website-id="f821178a-9140-4468-ad7e-95eb5cc1478c"
         ></script>
-        <script
-            defer
-            src="https://analytics.eucaristos.com.br/recorder.js"
-            data-website-id="f821178a-9140-4468-ad7e-95eb5cc1478c"
-            data-sample-rate="0.15"
-            data-mask-level="moderate"
-            data-max-duration="300000"
-        ></script>
+        <!-- Meta Pixel Code --> <script> !function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https://connect.facebook.net/en_US/fbevents.js'); fbq('init', '2168203800635322'); fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2168203800635322&ev=PageView&noscript=1" /></noscript> <!-- End Meta Pixel Code -->
         <title>Imersão Cansaço - Vinde a mim</title>
         <style>
             /* ================= CSS VARIABLES & RESET ================= */
@@ -1038,6 +1031,19 @@
 
                 document.querySelectorAll(".animate").forEach((el) => {
                     observer.observe(el);
+                });
+
+                 document.addEventListener('click', function(event) {
+                    // Procura se o elemento clicado (ou o "pai" dele) é um link (tag 'a')
+                    var target = event.target.closest('a');
+
+                    // ATENÇÃO: Substitua o trecho abaixo pela URL real do seu checkout
+                    var checkoutUrl = "eventos.eucaristos.com.br/checkout";
+
+                    // Se o link existir e contiver a URL de destino do checkout, dispara o Pixel
+                    if (target && target.href.includes(checkoutUrl)) {
+                        fbq('track', 'InitiateCheckout');
+                    }
                 });
             });
         </script>
