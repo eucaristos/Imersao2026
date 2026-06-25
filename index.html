@@ -33,10 +33,6 @@
             rel="stylesheet"
         />
         <script
-            async
-            src="https://eventos.eucaristos.com.br/widget.js"
-        ></script>
-        <script
             defer
             src="https://analytics.eucaristos.com.br/script.js"
             data-website-id="f821178a-9140-4468-ad7e-95eb5cc1478c"
@@ -113,6 +109,7 @@
                 margin-top: 1.5rem;
                 text-transform: uppercase;
                 letter-spacing: 0.5px;
+                text-align: center;
             }
             .btn:hover {
                 background: #b45309;
@@ -469,6 +466,58 @@
                     font-size: 3rem;
                 }
             }
+            /* ================= CTA ANIMATION ================= */
+            @keyframes pulse-shadow {
+                0% {
+                    box-shadow: 0 0 0 0 rgba(217, 119, 6, 0.5); /* Usa a cor var(--accent) */
+                }
+                70% {
+                    box-shadow: 0 0 0 15px rgba(217, 119, 6, 0);
+                }
+                100% {
+                    box-shadow: 0 0 0 0 rgba(217, 119, 6, 0);
+                }
+            }
+
+            .btn-pulse {
+                animation: pulse-shadow 2s infinite;
+            }
+
+            .btn-pulse:hover {
+                animation: none; /* Pausa o pulso para dar lugar à animação padrão de hover do .btn */
+            }
+
+            /* ================= WHATSAPP FAB ================= */
+            @keyframes pulse-whatsapp {
+                0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+                70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+                100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+            }
+
+            .whatsapp-fab {
+                position: fixed;
+                bottom: 30px;
+                right: 30px;
+                background-color: #25d366; /* Cor oficial do WhatsApp */
+                color: #ffffff;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                z-index: 9999;
+                text-decoration: none;
+                transition: transform 0.3s ease;
+                animation: pulse-whatsapp 2s infinite;
+            }
+
+            .whatsapp-fab:hover {
+                transform: scale(1.1);
+                background-color: #128c7e;
+                animation: none; /* Para a animação ao passar o mouse */
+            }
         </style>
     </head>
     <body>
@@ -550,6 +599,7 @@
                 </div>
 
                 <p><strong>Uma resposta integral à condição humana.</strong></p>
+                 <a href="https://eventos.eucaristos.com.br/event/5/imersao-cansaco-vinde-a-mim-vos-que-estais-cansados-mt-11-28" onclick="fbq('track', 'InitiateCheckout');" class="btn">Venha aprender a descansar</a>
             </div>
         </section>
 
@@ -637,51 +687,54 @@
 
         <div class="convidados-bg">
             <span>&NegativeThinSpace;</span>
-            <!--<section class="animate">
+            <section class="animate">
                 <h2 class="text-center">Nossos Convidados</h2>
                 <div class="convidados-grid">
                     <div class="convidado-card">
                         <img
-                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Euler"
+                            src="assets/euler.png"
                             alt="EULER"
                         />
-                        <h3>EULER</h3>
-                        <p>MINI BIO</p>
+                        <h3>Euler Nunes Vieira Neto</h3>
+                        <p>Fundador e moderador geral da Comunidade Católica Eucaristós. Formado em relações internacionais e Counseling</p>
                     </div>
                     <div class="convidado-card">
                         <img
-                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Dra.+Anna"
+                            src="assets/anna.jpg"
                             alt="DRA. ANNA"
                         />
-                        <h3>DRA. ANNA</h3>
-                        <p>MINI BIO</p>
+                        <h3>Dr. Anna Karolyne de Araújo Costa Golin</h3>
+                        <p>Médica especialista em Medicina de Família e Comunidade, com residência médica pelo Hospital Israelita Albert Einstein.</p>
                     </div>
                     <div class="convidado-card">
                         <img
-                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Almir"
+                            src="assets/almir.jpeg"
                             alt="ALMIR J. SANTOS"
                         />
-                        <h3>ALMIR J. SANTOS</h3>
-                        <p>MINI BIO</p>
+                        <h3>Prof.Dr. Almir J. Santos</h3>
+                        <p>Missionário Católico da Arquidiocese de Belém
+                        Doutor em Educação e Saúde; Mestre em Educação e Gestão do Conhecimento. Criador do Método Gaudium</p>
                     </div>
                     <div class="convidado-card">
                         <img
-                            src="https://via.placeholder.com/150/e2e8f0/334155?text=Dra.+Tatiana"
+                            src="assets/tatiana.jpeg"
                             alt="DRA. TATIANA LEGAL"
                         />
-                        <h3>DRA. TATIANA LEGAL</h3>
-                        <p>MINI BIO</p>
+                        <h3>Dra. Tatiana Cristina Legal</h3>
+                        <p>Psicóloga e pós graduada em Filosofia Clínica e Coaching Ontológico Aplicada a Gestão de Pessoas. Fundadora do EMIS - Espaço Multidisciplinar Integração do Saber</p>
                     </div>
                     <div class="convidado-card">
                         <img
-                            src="https://via.placeholder.com/150/e2e8f0/334155?text=A+Confirmar"
-                            alt="A CONFIRMAR"
+                            src="assets/gutemberg.jpeg"
+                            alt="Fr. Gutemberg de Albuquerque"
                         />
-                        <h3>A CONFIRMAR</h3>
-                        <p>MINI BIO</p>
+                        <h3>Fr. Gutemberg Machado, OSA</h3>
+                        <p> Ordem de Santo Agostinho - Província Agostiniana do Brasil
+                        Bacharelado e Licenciatura em Filosofia
+                        Bacharelado em Teologia </p>
                     </div>
                 </div>
-                </section>-->
+                </section>
         </div>
 
         <section class="animate" style="background: #f1f5f9; max-width: 100%">
@@ -729,6 +782,7 @@
                             momentos de espiritualidade e de interação com
                             nossos convidados.
                         </p>
+                        <a style="margin-top: auto;" href="https://eventos.eucaristos.com.br/event/5/imersao-cansaco-vinde-a-mim-vos-que-estais-cansados-mt-11-28" onclick="fbq('track', 'InitiateCheckout');" class="btn">Participe Presencialmente!</a>
                     </div>
 
                     <div class="modalidade-card">
@@ -978,23 +1032,22 @@
             <div class="price-box">
                 <h2>INVESTIMENTO</h2>
                 <div class="price">R$80,00</div>
-                <p>Pagamento no Pix ou Cartão</p>
+                <p>Pagamento no Pix, Cartão ou presencialmente no dia do curso</p>
 
-                <div
-                    data-hievents-id="5"
-                    data-hievents-primary-color="var(--primary)"
-                    data-hievents-primary-text-color="#000000"
-                    data-hievents-secondary-color="var(--accent)"
-                    data-hievents-secondary-text-color="#ffffff"
-                    data-hievents-background-color="#ffffff"
-                    data-hievents-widget-type="widget"
-                    data-hievents-widget-version="1.0"
-                    data-hievents-locale="pt-BR"
-                    data-hievents-padding="20px"
-                    data-hievents-autoresize="true"
-                    data-hievents-continue-button-text="Continuar"
-                    class="hievents-widget"
-                ></div>
+                <a
+                    href="https://eventos.eucaristos.com.br/event/5/imersao-cansaco-vinde-a-mim-vos-que-estais-cansados-mt-11-28"
+                    onclick="fbq('track', 'InitiateCheckout');"
+                    class="btn btn-pulse"
+                    style="width: 100%; font-size: 1.1rem; padding: 1.2rem; margin-top: 2rem; display: flex; align-items: center; justify-content: center; gap: 8px;"
+                >
+                    <span class="material-symbols-outlined">local_activity</span>
+                    GARANTIR MINHA VAGA
+                </a>
+
+                <p style="margin-top: 1.5rem; margin-bottom: 0; font-size: 0.85rem; color: var(--secondary); display: flex; align-items: center; justify-content: center; gap: 4px;">
+                    <span class="material-symbols-outlined" style="font-size: 1rem;">lock</span>
+                    Você será redirecionado para o ambiente seguro
+                </p>
             </div>
         </section>
 
@@ -1008,7 +1061,18 @@
                 />
             </div>
         </footer>
-
+        <!-- Floating Action Button WhatsApp -->
+        <a
+            href="https://chat.whatsapp.com/DqYDIdqobQaLuyviKaRYbr?s=hd&p=i&mlu=1"
+            target="_blank"
+            class="whatsapp-fab"
+            title="Entre no nosso grupo do WhatsApp"
+            onclick="fbq('track', 'Contact');"
+        >
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                </svg>
+        </a>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const observerOptions = {
